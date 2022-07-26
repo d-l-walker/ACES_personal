@@ -12,9 +12,13 @@ if not os.path.exists('clean_12m_7m'):
 os.chdir(pth+'/'+region+'/clean_12m_7m/')
 
 vis_all     = glob.glob(pth+'/'+region+'/twelve_m/spws/*.spw3') + glob.glob(pth+'/'+region+'/seven_m/spws/*.spw3')
+if os.path.isdir(region+'_12m_7m_SPW3_concat.ms')==False:
+    concat(vis       = vis_all,
+           concatvis = region+'_12m_7m_SPW3_concat.ms')
+
 hnco_pars   = tclean_commands[region+'_TM1']['tclean_cube_pars']['spw31']
 
-tclean(vis                     = vis_all,
+tclean(vis                     = region+'_12m_7m_SPW3_concat.ms',
        field                   = 'Sgr_A_star',
        datacolumn              = 'corrected',
        imagename               = region+'_12m_7m_SPW3.clean',
