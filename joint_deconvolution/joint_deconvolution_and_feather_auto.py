@@ -102,7 +102,3 @@ if os.path.isdir(pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_SPW3.clean.imag
     impbcor(imagename       = pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_TP.SPW3',
             pbimage         = pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_SPW3.clean.pb.dropdeg')
 
-    imregrid(imagename='Sgr_A_star_st_ao.12m_7m_TP.SPW3',
-             output='Sgr_A_star_st_ao.12m_7m_TP.SPW3.galactic',
-             template='GALACTIC')
-
