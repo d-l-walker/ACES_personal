@@ -97,8 +97,3 @@ if os.path.isdir(pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_SPW3.clean.imag
     feather(imagename       = pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_TP.SPW3',
             highres         = pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_SPW3.clean.image.dropdeg',
             lowres          = tp_data+'.regrid.dropdeg.depb')
-
-
-    impbcor(imagename       = pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_TP.SPW3',
-            pbimage         = pth+'/'+region+'/clean_12m_7m/'+region+'_12m_7m_SPW3.clean.pb.dropdeg')
-
